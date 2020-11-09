@@ -1,5 +1,6 @@
 import heapq
 
+# 일반적으로 heapsort의 시간복잡도는 O(NlogN)
 def minheapsort(iterable):
     h = []
     result = []
