@@ -19,22 +19,22 @@ def bfs(graph, x, y):
 
     while queue:
         node = queue.popleft()
-        x = node[0]
-        y = node[1]
+        row = node[0]
+        col = node[1]
         
         # row와 col을 x, y로 처리하다보니 헷갈린 문제 경험.
-        if x-1 >= 0 and graph[x-1][y] == 0:
-            queue.append([x-1, y])
-            graph[x-1][y] = 1
-        if x+1 < n and graph[x+1][y] == 0:
-            queue.append([x+1, y])
-            graph[x+1][y] = 1
-        if y-1 >= 0 and graph[x][y-1] == 0:
-            queue.append([x, y-1])
-            graph[x][y-1] = 1
-        if y+1 < m and graph[x][y+1] == 0:
-            queue.append([x, y+1])
-            graph[x][y+1] = 1
+        if row-1 >= 0 and graph[row-1][col] == 0:
+            queue.append([row-1, col])
+            graph[row-1][col] = 1
+        if row+1 < n and graph[row+1][col] == 0:
+            queue.append([row+1, col])
+            graph[row+1][col] = 1
+        if col-1 >= 0 and graph[row][col-1] == 0:
+            queue.append([row, y-1])
+            graph[row][col-1] = 1
+        if col+1 < m and graph[row][col+1] == 0:
+            queue.append([row, col+1])
+            graph[row][col+1] = 1
     
     return 1
 
