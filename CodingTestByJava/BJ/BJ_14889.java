@@ -1,5 +1,3 @@
-package com.ssafy.algo0317;
-
 import java.io.*;
 import java.util.StringTokenizer;
 
